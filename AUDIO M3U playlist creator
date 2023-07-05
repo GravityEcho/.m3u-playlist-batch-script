@@ -11,9 +11,9 @@ for /r %%a in (*.aac *.flac *.mp3) do (
 )   
 
 set "total=!i!"
->playlist.m3u echo #EXTM3U
->>playlist.m3u echo.
->>playlist.m3u (
+>playlist.m3u8 echo #EXTM3U8
+>>playlist.m3u8 echo.
+>>playlist.m3u8 (
     for /l %%p in (1,1,!total!) do (
         echo !song[%%p]!
 	echo. 
