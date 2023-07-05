@@ -1,5 +1,6 @@
 @echo off 
 setlocal enableDelayedExpansion
+chcp 65001
 
 set link1=link1
 set link2=link2
@@ -14,8 +15,8 @@ for /f "tokens=1" %%a in (CBBB.txt) do (
 )   
 
 set "total=!i!"
->CBBB.m3u echo #EXTM3U 
->>CBBB.m3u (
+>CBBB.m3u8 echo #EXTM3U8 
+>>CBBB.m3u8 (
     for /l %%p in (1,1,!total!) do (
 	set /a num=!random! %%10 +1
         echo #EXTINF:-1 ,!var[%%p]!
